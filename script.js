@@ -1,4 +1,4 @@
-// Dark mode, navigation drawer, and lightbox
+// Dark mode, navigation drawer, lightbox, download dialog and reactive gradient
 (function () {
   const body = document.body;
   const themeToggle = document.querySelector('.theme-toggle');
@@ -10,6 +10,13 @@
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = document.querySelector('.lightbox__img');
   const lightboxBackdrop = document.querySelector('.lightbox__backdrop');
+
+  const downloadDialog = document.querySelector('.download-dialog');
+  const downloadDialogBackdrop = document.querySelector('.download-dialog__backdrop');
+  const downloadDialogIso = document.querySelector('.download-dialog__iso-value[data-field="iso"]');
+  const downloadDialogSha = document.querySelector('.download-dialog__checksum[data-field="sha"]');
+  const downloadDialogCopy = document.querySelector('.download-dialog__copy');
+  const downloadDialogConfirm = document.querySelector('.download-dialog__confirm');
 
   // Theme: default is light. Only apply dark if stored explicitly.
   const storedTheme = window.localStorage.getItem('nobara-theme');
@@ -30,11 +37,13 @@
 
   // Nav drawer
   function openDrawer() {
+    if (!navDrawer || !navDrawerBackdrop) return;
     navDrawer.classList.add('open');
     navDrawerBackdrop.classList.add('open');
   }
 
   function closeDrawer() {
+    if (!navDrawer || !navDrawerBackdrop) return;
     navDrawer.classList.remove('open');
     navDrawerBackdrop.classList.remove('open');
   }
@@ -68,7 +77,6 @@
     if (!lightbox || !lightboxImg) return;
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
-    // Keep last src for quick reopen; no need to clear.
   }
 
   if (lightboxBackdrop) {
@@ -87,33 +95,14 @@
     img.addEventListener('click', () => openLightbox(img.src, img.alt));
   });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeLightbox();
-      closeDrawer();
-    }
-  });
-
-
   // Download dialog with checksum
-  const downloadDialog = document.querySelector('.download-dialog');
-  const downloadDialogBackdrop = document.querySelector('.download-dialog__backdrop');
-  const downloadDialogIso = document.querySelector('.download-dialog__iso-value[data-field="iso"]');
-  const downloadDialogSha = document.querySelector('.download-dialog__checksum[data-field="sha"]');
-  const downloadDialogCopy = document.querySelector('.download-dialog__copy');
-  const downloadDialogConfirm = document.querySelector('.download-dialog__confirm');
-
   let pendingDownloadUrl = null;
 
   function openDownloadDialog(iso, sha, url) {
     if (!downloadDialog) return;
     pendingDownloadUrl = url;
     if (downloadDialogIso) downloadDialogIso.textContent = iso || '';
-    if (downloadDialogSha) {
-      downloadDialogSha.textContent = sha && !sha.startsWith('SHA256_')
-        ? sha
-        : 'sha256sum placeholder — replace in HTML with the real checksum from nobaraproject.org.';
-    }
+    if (downloadDialogSha) downloadDialogSha.textContent = sha || '';
     downloadDialog.classList.add('open');
     downloadDialog.setAttribute('aria-hidden', 'false');
   }
@@ -156,7 +145,14 @@
     });
   }
 
-
+  // Close on Escape
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLightbox();
+      closeDownloadDialog();
+      closeDrawer();
+    }
+  });
 
   // Subtle reactive background gradient
   const rootEl = document.documentElement;
@@ -181,5 +177,4 @@
     rootEl.style.setProperty('--bg-grad-x', '18%');
     rootEl.style.setProperty('--bg-grad-y', '0%');
   });
-
 })();
