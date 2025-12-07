@@ -1,53 +1,44 @@
-Nobara Website (Material 3 Inspired Redesign)
+# Nobara Website (Material 3 Inspired Redesign)
 
-A modern, responsive redesign of the Nobara Project website, inspired by Google Store and Google Antigravity’s visual language.
-Built with a clean architecture, smooth animations, accessible components, and a subtle reactive background gradient.
+A modern, responsive redesign of the Nobara Project website, inspired by the visual language of Google Store and Google Antigravity.  
+This version focuses on clarity, smooth interactions, and an elegant Material 3 aesthetic.
 
-✨ Features
+## ✨ Features
+- Material You / Material 3–inspired interface  
+- Light & dark themes with animated sun/moon toggle  
+- Subtle reactive background gradient that follows pointer movement  
+- Zoomable images (lightbox) for edition previews  
+- Download dialog including:  
+  - ISO filename  
+  - SHA256 checksum  
+  - Copy checksum button  
+  - Donate link  
+  - Confirm download button  
+- Fully responsive design across desktop and mobile  
+- Built using pure HTML, CSS, and JS (no frameworks)
 
-Material You / Material 3–inspired UI
-
-Light & dark themes with animated sun/moon toggle
-
-Reactive background gradient that gently responds to pointer movement
-
-Image zoom/lightbox for edition previews
-
-Download dialog with:
-
-ISO filename
-
-SHA256 checksum
-
-Copy-to-clipboard button
-
-Donate button
-
-Confirm download action
-
-Fully responsive layout (desktop, tablet, mobile)
-
-Uses no frameworks — pure HTML, CSS, JS
-
-📁 Structure
+## 📁 Project Structure
+```
 index.html          → Homepage  
 download.html       → Downloads page  
-styles.css          → Full UI design system + animations  
-script.js           → Theme toggle, navigation drawer, dialogs, interactions  
-img/                → Logos, icons, assets  
+styles.css          → Design system, animations, theming  
+script.js           → Theme toggle, menu drawer, dialogs, interactions  
+img/                → Logos and assets  
+```
 
-🚀 How to run
+## 🚀 Running Locally
+You can open `index.html` directly, or serve the folder with a simple static server:
 
-Simply open index.html in any browser, or serve the directory with a static web server:
-
+```bash
 python3 -m http.server
-
+```
 
 Then visit:
 
+```
 http://localhost:8000
+```
 
-📜 About
-
-This project is an independent, community-driven redesign concept for the Nobara Project website.
-It is not affiliated with the official Nobara maintainers or Fedora/Red Hat.
+## 📜 About
+This is an independent redesign project inspired by Nobara.  
+It is **not officially affiliated** with the Nobara Project, Fedora, or Red Hat.
