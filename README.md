@@ -5,9 +5,6 @@
 A modern, responsive redesign of the Nobara Project website, inspired by the visual language of Google Store and Google Antigravity.  
 This version focuses on clarity, smooth interactions, and an elegant Material 3 aesthetic.
 
-> 💡 Tip: Place your own screenshots in the `img/` folder with the filenames used below  
-> (or update the paths to match your actual screenshot names).
-
 ---
 
 ## ✨ Features
@@ -41,13 +38,6 @@ This version focuses on clarity, smooth interactions, and an elegant Material 3 
 
 ![Nobara Website – download dialog](img/nobara-download-dialog.png)
 
-You can generate or capture these screenshots yourself and save them with the same filenames inside the `img/` directory:
-
-- `img/nobara-hero-light.png`
-- `img/nobara-hero-dark.png`
-- `img/nobara-download-dialog.png`
-
-Or update the image paths in this README to match your own filenames.
 
 ---
 
@@ -61,9 +51,7 @@ script.js                → Theme toggle, menu drawer, dialogs, interactions
 
 img/
   nobara-icon.png        → Logo / favicon
-  nobara-hero-light.png  → (your screenshot) light mode preview
-  nobara-hero-dark.png   → (your screenshot) dark mode preview
-  nobara-download-dialog.png → (your screenshot) download dialog preview
+
 ```
 
 ---
