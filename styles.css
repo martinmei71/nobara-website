@@ -1094,3 +1094,19 @@ body.dark { --footer-bg: #020617; }
   opacity: 0.85;
   pointer-events: none;
 }
+
+/* LINKS: mesma cor que o texto, en semi-negrita e subliñado a trazos */
+a:not(.button):not(.nav-link):not(.chip-link):not(.brand) {
+  color: inherit;                        /* mesma cor que o texto */
+  font-weight: 500;                      /* semi-negrita */
+  text-decoration-line: underline;
+  text-decoration-style: dashed;         /* subliñado a trazos */
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+/* Hover → destaca en púrpura */
+a:not(.button):not(.nav-link):not(.chip-link):not(.brand):hover {
+  color: #7c3aed !important;             /* púrpura da web */
+  text-decoration-style: dashed;
+}
