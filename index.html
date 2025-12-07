@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nobara Linux | The Nobara Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nobara is a Fedora-based experience tuned for gaming, streaming, and content creation — with everything ready out of the box." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/nobara-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="top-app-bar">
+    <div class="top-app-bar__left">
+      <button class="icon-button nav-menu-button" aria-label="Open navigation menu">
+        <span class="nav-menu-icon"></span>
+      </button>
+      <a href="index.html#hero" class="brand">
+        <img src="img/nobara-icon.png" alt="Nobara logo" class="brand__logo-img" />
+        <span class="brand__text">Nobara Project</span>
+      </a>
+    </div>
+    <nav class="top-app-bar__nav" aria-label="Primary navigation">
+      <a href="index.html#hero" class="nav-link nav-link--active">Overview</a>
+      <a href="download.html" class="nav-link">Downloads</a>
+      <a href="https://wiki.nobaraproject.org" class="nav-link" target="_blank" rel="noreferrer">Wiki</a>
+      <a href="https://wiki.nobaraproject.org/FAQ/FAQ" class="nav-link" target="_blank" rel="noreferrer">FAQ</a>
+      <a href="https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines" class="nav-link" target="_blank" rel="noreferrer">Getting started</a>
+      <a href="https://discord.com/invite/nobaraproject" class="nav-link" target="_blank" rel="noreferrer">Community</a>
+      <a href="https://nobara-project-merch-store.printify.me" class="nav-link" target="_blank" rel="noreferrer">Store</a>
+    </nav>
+    <div class="top-app-bar__right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle__track"></span>
+        <span class="theme-toggle__thumb"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" aria-hidden="true">
+    <div class="nav-drawer__header">
+      <span>Nobara Project</span>
+      <button class="icon-button nav-drawer__close" aria-label="Close menu">
+        ✕
+      </button>
+    </div>
+    <nav class="nav-drawer__nav">
+      <a href="index.html#hero" class="nav-link nav-drawer__link">Overview</a>
+      <a href="download.html" class="nav-link nav-drawer__link">Downloads</a>
+      <a href="https://wiki.nobaraproject.org" class="nav-link nav-drawer__link" target="_blank" rel="noreferrer">Wiki</a>
+      <a href="https://wiki.nobaraproject.org/FAQ/FAQ" class="nav-link nav-drawer__link" target="_blank" rel="noreferrer">FAQ</a>
+      <a href="https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines" class="nav-link nav-drawer__link" target="_blank" rel="noreferrer">Getting started</a>
+      <a href="https://discord.com/invite/nobaraproject" class="nav-link nav-drawer__link" target="_blank" rel="noreferrer">Community</a>
+      <a href="https://nobara-project-merch-store.printify.me" class="nav-link nav-drawer__link" target="_blank" rel="noreferrer">Store</a>
+    </nav>
+  </div>
+  <div class="nav-drawer__backdrop"></div>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="section-inner hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Nobara Linux</h1>
+          <p class="hero__subtitle">
+            A Fedora-based desktop, tuned for gaming, streaming, and content creation — so you can skip the tweaking and start doing.
+          </p>
+          <div class="hero__actions">
+            <a href="download.html" class="button button--primary">
+              Download Nobara 42
+            </a>
+            <a href="https://wiki.nobaraproject.org/#modifications" class="button button--tonal" target="_blank" rel="noreferrer">
+              See technical changes
+            </a>
+          </div>
+          <ul class="hero__bullets">
+            <li>Stable Fedora base, optimized for games and creative work.</li>
+            <li>WINE, OBS, codecs, and third-party repositories preconfigured.</li>
+            <li>Less time in the terminal, more time playing and creating.</li>
+          </ul>
+          <p class="hero__disclaimer">
+            Nobara is a hobby project, independent of Fedora and Red Hat. It is intended for personal use, not for critical production environments.
+          </p>
+        </div>
+        <div class="hero__media">
+          <div class="hero-card">
+            <h2>Ready from first boot</h2>
+            <ul>
+              <li>NVIDIA and AMD drivers tuned for gaming.</li>
+              <li>Steam, Proton-GE, and capture tools just a few clicks away.</li>
+              <li>Desktop presets built for multitasking and creative workflows.</li>
+            </ul>
+            <a href="https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines" class="chip-link" target="_blank" rel="noreferrer">
+              Quick start guide
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>Why Nobara?</h2>
+          <p>Bring a modern Fedora desktop to life with gaming-friendly defaults and fewer extra steps.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Simpler experience</h3>
+            <p>
+              Built for people who prefer clear graphical options over long terminal commands.
+            </p>
+            <ul class="card-list">
+              <li>Guided installer.</li>
+              <li>First-run setup suggestions.</li>
+              <li>Integrated updates.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Gaming-first setup</h3>
+            <p>
+              Ships with WINE dependencies, OBS Studio, popular multimedia codecs, and third-party repositories enabled.
+            </p>
+            <ul class="card-list">
+              <li>Steam ready to sign in.</li>
+              <li>Good fit for Steam Deck-style handhelds.</li>
+              <li>Kernel and graphics tuning for low-latency play.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Fedora roots, own personality</h3>
+            <p>
+              Uses Fedora packages alongside RPMFusion and Nobara repositories to fill gaps for a gaming and creator desktop.
+            </p>
+            <ul class="card-list">
+              <li>Third-party repos enabled out of the box.</li>
+              <li>Desktop choices for different styles of work and play.</li>
+              <li>Project is independent from Fedora and Red Hat.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>Choose your edition</h2>
+          <p>Five desktop flavors. One goal: get you gaming and creating quickly.</p>
+        </div>
+        <div class="edition-grid">
+          <article class="card edition-card">
+            <div class="edition-card__media">
+              <img src="https://nobaraproject.org/wp-content/uploads/2025/01/N41Official.png" alt="Nobara Official desktop" loading="lazy" class="lightbox-trigger" />
+            </div>
+            <div class="edition-card__content">
+              <h3>Official</h3>
+              <p>The reference Nobara experience. KDE with a custom look, balanced for games, creative tools, and everyday apps.</p>
+              <ul class="card-list">
+                <li>Quick access to games and launchers.</li>
+                <li>Presets for streaming and multitasking.</li>
+              </ul>
+              <a href="download.html#standard" class="chip-link">Get Official</a>
+            </div>
+          </article>
+
+          <article class="card edition-card">
+            <div class="edition-card__media">
+              <img src="https://nobaraproject.org/wp-content/uploads/2025/01/N41GNOME-1024x639.png" alt="Nobara GNOME desktop" loading="lazy" class="lightbox-trigger" />
+            </div>
+            <div class="edition-card__content">
+              <h3>GNOME</h3>
+              <p>Clean, task-focused GNOME with Nobara’s tweaks underneath. Minimal, direct, and easy to live in.</p>
+              <ul class="card-list">
+                <li>Simple window workflow with few distractions.</li>
+                <li>Great on laptops and touch devices.</li>
+              </ul>
+              <a href="download.html#standard" class="chip-link">Get GNOME</a>
+            </div>
+          </article>
+
+          <article class="card edition-card">
+            <div class="edition-card__media">
+              <img src="https://nobaraproject.org/wp-content/uploads/2025/01/N41KDE-1024x639.png" alt="Nobara KDE desktop" loading="lazy" class="lightbox-trigger" />
+            </div>
+            <div class="edition-card__content">
+              <h3>KDE</h3>
+              <p>A more traditional KDE for people who want full control over how their desktop looks and behaves.</p>
+              <ul class="card-list">
+                <li>Panels, widgets, and shortcuts your way.</li>
+                <li>Strong choice for heavy desktop workflows.</li>
+              </ul>
+              <a href="download.html#standard" class="chip-link">Get KDE</a>
+            </div>
+          </article>
+
+          <article class="card edition-card">
+            <div class="edition-card__media">
+              <img src="https://nobaraproject.org/wp-content/uploads/2024/07/n40steam-2.png" alt="Nobara Steam HTPC interface" loading="lazy" class="lightbox-trigger" />
+            </div>
+            <div class="edition-card__content">
+              <h3>Steam-HTPC</h3>
+              <p>Living-room-friendly setup, tuned for TVs and controllers. Feels at home on the couch.</p>
+              <ul class="card-list">
+                <li>Navigation that works well with gamepads.</li>
+                <li>Boot straight into a console-like experience.</li>
+              </ul>
+              <a href="download.html#standard" class="chip-link">Get Steam-HTPC</a>
+            </div>
+          </article>
+
+          <article class="card edition-card">
+            <div class="edition-card__media">
+              <img src="https://nobaraproject.org/wp-content/uploads/2025/01/N41SDHH-1024x639.png" alt="Nobara Steam handheld desktop" loading="lazy" class="lightbox-trigger" />
+            </div>
+            <div class="edition-card__content">
+              <h3>Steam-Handheld</h3>
+              <p>Designed for Steam Deck-style handhelds. Compact desktop that fits smaller screens.</p>
+              <ul class="card-list">
+                <li>Layouts scaled for portable displays.</li>
+                <li>Fast switch between desktop and game modes.</li>
+              </ul>
+              <a href="download.html#standard" class="chip-link">Get Steam-Handheld</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>Start with confidence</h2>
+          <p>These guides help you go from ISO to daily driver smoothly.</p>
+        </div>
+        <div class="cards-grid cards-grid--two">
+          <article class="card card--horizontal">
+            <div class="card__content">
+              <h3>Step-by-step install</h3>
+              <p>
+                From download and USB creation to first boot and updates — everything in one place.
+              </p>
+              <a href="https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines" class="chip-link" target="_blank" rel="noreferrer">
+                Open new user guide
+              </a>
+            </div>
+          </article>
+          <article class="card card--horizontal">
+            <div class="card__content">
+              <h3>Wiki & troubleshooting</h3>
+              <p>
+                Learn how to upgrade, switch desktops, add extra drives, and adjust graphics drivers.
+              </p>
+              <a href="https://wiki.nobaraproject.org" class="chip-link" target="_blank" rel="noreferrer">
+                Explore Nobara wiki
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>Community & support</h2>
+          <p>A hobby project powered by its community and the people who run it every day.</p>
+        </div>
+        <div class="community-grid">
+          <article class="card community-card">
+            <img
+              src="https://nobaraproject.org/wp-content/uploads/2022/07/discord.png"
+              alt="Nobara Discord"
+              class="community-card__image"
+              loading="lazy"
+            />
+            <div class="community-card__content">
+              <h3>Official Discord</h3>
+              <p>
+                Join the server to ask questions, share setups, and follow the latest project updates.
+              </p>
+              <a href="https://discord.com/invite/nobaraproject" class="button button--outlined button--full" target="_blank" rel="noreferrer">
+                Join Discord
+              </a>
+            </div>
+          </article>
+          <article class="card community-card">
+            <img
+              src="https://nobaraproject.org/wp-content/uploads/2022/07/become_a_patron_button.png"
+              alt="Nobara Patreon"
+              class="community-card__image community-card__image--small"
+              loading="lazy"
+            />
+            <div class="community-card__content">
+              <h3>Support on Patreon</h3>
+              <p>
+                If Nobara makes your setup easier, you can help keep it going with a monthly contribution.
+              </p>
+              <a href="https://www.patreon.com/nobaraproject" class="button button--outlined button--full" target="_blank" rel="noreferrer">
+                Go to Patreon
+              </a>
+            </div>
+          </article>
+          <article class="card community-card">
+            <div class="community-card__content">
+              <h3>Official merch</h3>
+              <p>
+                Stickers, shirts, and more. A simple way to support the project and bring Nobara into your setup.
+              </p>
+              <a href="https://nobara-project-merch-store.printify.me" class="button button--tonal button--full" target="_blank" rel="noreferrer">
+                Visit store
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dense">
+      <div class="section-inner">
+        <h2>Legal overview</h2>
+        <p class="license-intro">
+          Nobara is a hobby distribution with no warranty and no professional support. Before installing, it’s important to understand the basics.
+        </p>
+        <div class="license-grid">
+          <article class="card card--compact">
+            <h3>Personal use</h3>
+            <p>
+              Not designed for mission-critical production. You use it at your own risk, and there is no guaranteed support.
+            </p>
+          </article>
+          <article class="card card--compact">
+            <h3>Third-party repositories</h3>
+            <p>
+              Includes RPMFusion Free and Nonfree and other repositories with legally redistributable software that is outside Fedora.
+            </p>
+          </article>
+          <article class="card card--compact">
+            <h3>Independent from Fedora</h3>
+            <p>
+              Nobara is not a Fedora Spin and has no formal relationship with Red Hat. It uses their code and repositories but remains a separate project.
+            </p>
+          </article>
+        </div>
+        <p class="license-footer">
+          You can read the full license agreement and extra legal details on the official Nobara website.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__left">
+        <span>© 2025 Nobara Linux | The Nobara Project</span>
+        <span>Based on Fedora. Independent project, not affiliated with Fedora or Red Hat.</span>
+      </div>
+      <div class="site-footer__right">
+        <a href="https://docs.fedoraproject.org/en-US/fesco/Third_Party_Repository_Policy/" target="_blank" rel="noreferrer">
+          Fedora third-party repository policy
+        </a>
+        <a href="https://rpmfusion.org/FAQ#Free_repository" target="_blank" rel="noreferrer">
+          RPMFusion FAQ
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop"></div>
+    <figure class="lightbox__content">
+      <img src="" alt="" class="lightbox__img" />
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
